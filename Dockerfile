@@ -8,7 +8,7 @@ RUN apt-get install -y libxkbfile-dev libxrandr-dev libcairo2-dev
 WORKDIR /package/
 COPY ./ FreeRDP/
 RUN cd FreeRDP && dpkg-buildpackage -b -rfakeroot -us -uc
-RUN mkdir debs/
-RUN mv *.deb debs/
-RUN dpkg-scanpackages debs/ | gzip > debs/Packages.gz
-RUN tar -cvf package.tar.gz -C debs .
+RUN mkdir freerdppackages/
+RUN mv *.deb freerdppackages/
+RUN dpkg-scanpackages freerdppackages/ > freerdppackages/Packages
+RUN tar -cvzf package.tar.gz freerdppackages
