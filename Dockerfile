@@ -10,3 +10,4 @@ RUN cd ./package/FreeRDP && dpkg-buildpackage -b -rfakeroot -us -uc
 RUN mkdir ./package/debs/
 RUN mv ./package/*.deb ./package/debs/
 RUN dpkg-scanpackages ./package/debs/ | gzip > ./package/debs/Packages.gz
+RUN cd ./package/ && tar -cvf package.tar.gz -C debs .
