@@ -1,4 +1,4 @@
-freerdp (1.1.0~git20140921.1.440916e+dfsg1-15) unstable; urgency=medium
+freerdp (1.2.2) unstable; urgency=medium
 
   [ Bernhard Miklautz ]
   * debian/patches:
