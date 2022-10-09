@@ -1,0 +1,10 @@
+{
+    "cmake.configureArgs": [
+        "-DWITH_OPENH264=ON",
+        "-DWITH_WIN_CONSOLE=ON",
+        "-DWITH_DEBUG=ON",
+        "-DCHANNEL_URBDRC=OFF",
+        "-DCHANNEL_URBDRC_CLIENT=OFF"
+    ],
+    "cmake.generator": "Ninja"
+}
